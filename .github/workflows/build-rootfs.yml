@@ -19,7 +19,6 @@ jobs:
           sudo apt-get install -y autoconf automake debhelper build-essential \
             libtool qemu-user-static debootstrap schroot apt-cacher-ng \
             git wget xz-utils
-          # pxz pode não existir no Ubuntu; xz-utils cobre a compressão se faltar
           sudo apt-get install -y pxz || echo "pxz indisponível, seguiremos com xz-utils"
 
       - name: Confirmar binfmt para arm64 (necessário pro qemu-debootstrap)
